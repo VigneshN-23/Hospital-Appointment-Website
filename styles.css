@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li, a , button{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: red;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2px 2%;
+    border-bottom: 2px solid red;
+}
+
+.logo{
+    cursor:pointer;
+    margin-top: 2.5%;
+    margin-right: auto;
+}
+
+.nav_link{
+    list-style: none;
+}
+
+.nav_link li{
+    display: inline-block;
+    margin-top: 10%;
+    padding: 0px 20px;
+}
+
+.nav_link li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav_link li a:hover{
+    color: maroon;
+}
+
+button{
+    margin-top: 25%;
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor:pointer;
+    transition: all 0.5s ease 0s;
+}
+
+button:hover{
+    background-color: white;
+    color: red;
+}
+
+.wall {
+  position: relative;
+  max-width: 800px; /* Maximum width */
+  margin: 0 auto; /* Center it */
+}
+
+.wall .content {
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+}
