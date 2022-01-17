@@ -7,33 +7,76 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width", initial-scale="1">
     <link rel="stylesheet" href="styles.css">
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 </head>
 <body>
     <header>
-        <img class="logo" src="C:\Users\vinun\OneDrive\Desktop\⠀\ProjectXiV\HEALTHPLUS⁺.png" height="50">
+        <img class="logo" src="HEALTHPLUS⁺.png" height="75">
         <nav>
-            <ul class="nav_link">
+            <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
+                <li><a href="#">Services</a>
+                    <ul>
+                        <li><a href="#">Covid Test</a></li>
+                        <li><a href="#">Appointment</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact Us</a></li>
-
-
             </ul>
         </nav>
         <a class="cta" href="#"><button>Sign Up</button></a>
     </header>
       <section>
-        <div class="wall">
-          <img src="stockdoc1.jpg" alt="stockdoc1" style="width:100%;">
-          <div class="content">
-            <h1>Heading</h1>
-            <p>content</p>
-          </div>
+        <div id="ForCovid" class="ForCovid" data-aos="fade-right">
+          <img src="Vaccine (1).gif" style="width:40%;">
         </div>
+          <div class="covid">
+            <h1>
+              <p>
+                <span>Stay </span>Safe, <span> Stay </span>Healthy
+              </p>
+            </h1>
+            <h3>
+              <p>Showing symptoms for covid? Want to get yourself tested?</p>
+                    <p>You are at the right place </p>
+                    <p>
+                      &nbsp
+                    </p>
+              <a class="btn1" href="#"><button1>Register</button1>
+              </a>
+
+            </h3>
+          </div>
       </section>
+      <section style="padding-top:140px">
+        <div id="Appointment" class="Appointment" data-aos="fade-right">
+          <img src="Appointment.jpeg" style="width:40%;">
+        </div>
+          <div class="content">
+            <h2>
+              Looking For <span1>Appointments?</span1>
+            </h2>
+            <h4>
+              <p>Book one right now</p>
+              <p>
+                &nbsp
+              </p>
+              <a class="btn2" href="#"><button2>Book !</button2>
+              </a>
+
+            </h4>
+          </div>
+      </section>
+
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init({
+          offset: 300,
+          duration: 1000
+        });
+      </script>
 
     </body>
 </html>
