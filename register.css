@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li, a , button{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2px 2%;
+}
+
+.logo{
+    cursor:pointer;
+    margin-top: 2.5%;
+    margin-right: auto;
+}
+
+nav{
+  background-color: white;
+  margin-top: 2.8%;
+
+}
+
+nav ul{
+  float: left;
+}
+
+nav ul li{
+  float: left;
+  list-style: none;
+  position: relative;
+}
+
+nav ul li a{
+  display: block;
+  padding: 30px;
+}
+
+nav ul li a:hover {
+  color: red;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  background-color: white;
+  padding: 10px;
+}
+
+nav ul li:hover ul {
+  display: block;
+
+}
+
+nav ul li ul li {
+  width: 180px;
+}
+
+nav ul li ul li a {
+  padding: 8px 14px;
+}
+
+nav ul li ul li a:hover {
+  background-color: white;
+}
+
+
+button{
+    margin-top: 25%;
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: #C53F3F;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor:pointer;
+    transition: all 0.5s ease 0s;
+}
+
+button:hover{
+    background-color: white;
+    color: #C53F3F;
+    box-shadow:0.05rem .025rem 0 rgba(12, 12, 12, 0.5);
+}
