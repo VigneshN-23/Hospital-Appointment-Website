@@ -98,9 +98,6 @@ html{
   scroll-behavior: smooth;
 }
 
-span{
-  color: #C53F3F;
-}
 .ForCovid{
   padding-left: 100px;
 }
@@ -110,7 +107,7 @@ span{
 }
 h1
 {
-  font-size: 3em;
+  font-size: 5em;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -124,7 +121,7 @@ h3
 {
   font-size: 1.5em;
   margin: 0;
-  padding: 0;
+  padding-left: 150px;
   text-align: center;
   font-family: 'Montserrat';
   position: absolute;
@@ -148,6 +145,45 @@ button1:hover{
     box-shadow:0.8rem 0.8rem 0 rgba(12, 12, 12, 0.2);
 }
 
+span{
+  color: #C53F3F;
+}
+
+.Appointment{
+  padding-bottom: 80px;
+  padding-right: 80px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.content{
+  padding: 0;
+  margin: 0;
+}
+h2
+{
+  font-size: 5em;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Montserrat';
+  position: absolute;
+  top: 135%;
+  right: 55%;
+}
+h4
+{
+  font-size: 1.5em;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Montserrat';
+  position: absolute;
+  top: 155%;
+  right: 70%;
+}
+
 button2{
   padding: 10px 75px;
   background-color: green;
@@ -168,7 +204,34 @@ span1{
   color: green;
 }
 
-.Appointment{
+h5
+{
+  font-size: 5em;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Montserrat';
+  position: absolute;
+  top: 225%;
+  left: 57%;
+}
+
+h7
+{
+  font-size: 1.5em;
+  margin: 0;
+  padding-left: 150px;
+  text-align: center;
+  font-family: 'Montserrat';
+  position: absolute;
+  top: 250%;
+  left: 49%;
+}
+
+span2{
+  color: #647680
+}
+.ContactUs{
   padding-bottom: 80px;
   padding-right: 80px;
   display: flex;
@@ -176,22 +239,22 @@ span1{
   align-items: flex-end;
 }
 
-.content{
+.content3{
   padding: 0;
   margin: 0;
 }
-h2
+h6
 {
-  font-size: 3em;
+  font-size: 5em;
   margin: 0;
   padding: 0;
   text-align: center;
   font-family: 'Montserrat';
   position: absolute;
-  top: 135%;
-  right: 55%;
+  top: 335%;
+  right: 68%;
 }
-h4
+h8
 {
   font-size: 1.5em;
   margin: 0;
@@ -199,6 +262,6 @@ h4
   text-align: center;
   font-family: 'Montserrat';
   position: absolute;
-  top: 155%;
-  right: 70%;
+  top: 360%;
+  right: 73%;
 }
