@@ -3,28 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Navbar</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width", initial-scale="1">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <meta name="viewport" content="width=device-width", initial-scale="1"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 </head>
-<body>
-    <header>
-        <img class="logo" src="HEALTHPLUS⁺.png" height="75">
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a>
-                    <ul>
-                        <li><a href="#ForCovid">Covid Test</a></li>
-                        <li><a href="#Appointment">Appointment</a></li>
-                    </ul>
-                </li>
-                <li><a href="#About">About</a></li>
-                <li><a href="#ContactUs">Contact Us</a></li>
-            </ul>
-        </nav>
-        <a class="cta" href="#"><button>Sign Up</button></a>
-    </header>
+<body>  
+    <div class="container">
+        <form>
+            <br></br>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Full Name</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp"  placeholder="Last Middle First...">
+            </div>
+            <p>
+                <form action="/action_page.php">
+                    <label for="birthday">Date Of Birth</label>
+                    <br></br>
+                    <input type="date" id="Birthdate" name="Birthdate">
+                </form>
+                </p>
+            <label for="exampleInputEmail1" class="form-label">Gender :</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Male
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Female
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                <label class="form-check-label" for="flexRadioDefault3">
+                  Other
+                </label>
+              </div>
+              <p></p>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Aadhar No.</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="XXXX-XXXX-XXXX-XXXX">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Full Address</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Street Address, Taluka/City, State">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Pin Code</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp" maxlength="7">
+            </div>
+            <!-- <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Symptoms</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp">
+            </div> -->
+            <label for="exampleInputEmail1" class="form-label">Symptoms</label>
+            <!-- <form action="" method="post">
+                <input type="checkbox" name="Symptom" value="cough" /> Cough
+                <input type="checkbox" name="Symptom2" value="runny nose" /> Runny Nose
+                <input type="checkbox" name="Symptom3" value="body aches" /> Body Aches
+                <br></br>
+                <input type="checkbox" name="Symptom" value="high fever" /> High Fever
+                <input type="checkbox" name="Symptom2" value="sore throat" /> Sore Throat
+                <input type="checkbox" name="Symptom3" value="breathing difficulties" /> Breathing Difficulties
+                <br></br>
+                <input type="checkbox" name="Symptom" value="loss of taste or smell" /> Loss Of Taste Or Smell
+                <input type="checkbox" name="Symptom2" value="nasal congestion" /> Nasal Congestion
+                <input type="checkbox" name="Symptom3" value="others" /> Others
+            </form> -->
+            <!-- <div class="form-multiple-column" data-columncount="2" role="group" aria-labelledby="label_19" data-component="checkbox">
+                <span class="form-checkbox-item">
+                  <span class="dragger-item">
+                  </span>
+                  <input type="checkbox" aria-describedby="label_19" class="form-checkbox" id="input_19_0" name="q19_pleaseCheck[]" value="Loss of taste or smell">
+                  <label id="label_input_19_0" for="input_19_0"> Loss of taste or smell </label>
+                </span>
+                <span class="form-checkbox-item">
+                  <span class="dragger-item">
+                  </span>
+                  <input type="checkbox" aria-describedby="label_19" class="form-checkbox" id="input_19_1" name="q19_pleaseCheck[]" value="High fever">
+                  <label id="label_input_19_1" for="input_19_1"> High fever </label>
+                </span>
+                <span class="form-checkbox-item" style="clear:left">
+                  <span class="dragger-item">
+                  </span>
+                  <input type="checkbox" aria-describedby="label_19" class="form-checkbox" id="input_19_2" name="q19_pleaseCheck[]" value="Difficulty in breathing">
+                  <label id="label_input_19_2" for="input_19_2"> Difficulty in breathing </label>
+                </span>
+                <span class="form-checkbox-item">
+                  <span class="dragger-item">
+                  </span>
+                  <input type="checkbox" aria-describedby="label_19" class="form-checkbox" id="input_19_3" name="q19_pleaseCheck[]" value="Body aches">
+                  <label id="label_input_19_3" for="input_19_3"> Body aches </label>
+                </span>
+                <span class="form-checkbox-item" style="clear:left">
+                  <span class="dragger-item">
+                  </span>
+                  <input type="checkbox" aria-describedby="label_19" class="form-checkbox" id="input_19_4" name="q19_pleaseCheck[]" value="Runny nose">
+                  <label id="label_input_19_4" for="input_19_4"> Runny nose </label>
+                </span>
+                <span class="form-checkbox-item">
+                  <span class="dragger-item">
+                  </span>
+                  <input type="checkbox" aria-describedby="label_19" class="form-checkbox" id="input_19_5" name="q19_pleaseCheck[]" value="Diarrhea">
+                  <label id="label_input_19_5" for="input_19_5"> Diarrhea </label>
+                </span>
+                <span class="form-checkbox-item" style="clear:left">
+                  <span class="dragger-item">
+                  </span>
+                  <input type="checkbox" aria-describedby="label_19" class="form-checkbox" id="input_19_6" name="q19_pleaseCheck[]" value="Cough">
+                  <label id="label_input_19_6" for="input_19_6"> Cough </label>
+                </span>
+                <span class="form-checkbox-item">
+                  <span class="dragger-item">
+                  </span>
+                  <input type="checkbox" aria-describedby="label_19" class="form-checkbox" id="input_19_7" name="q19_pleaseCheck[]" value="Persistant pain or pressure on chest">
+                  <label id="label_input_19_7" for="input_19_7"> Persistant pain or pressure on chest </label>
+                </span>
+                <p></p>
+                <span class="form-checkbox-item" style="clear:left">
+                  <span class="dragger-item">
+                  </span>
+                  <input type="checkbox" aria-describedby="label_19" class="form-checkbox" id="input_19_8" name="q19_pleaseCheck[]" value="Nasal congestion">
+                  <label id="label_input_19_8" for="input_19_8"> Nasal congestion </label>
+                </span>
+                <span class="form-checkbox-item">
+                  <span class="dragger-item">
+                  </span>
+                  <input type="checkbox" aria-describedby="label_19" class="form-checkbox" id="input_19_9" name="q19_pleaseCheck[]" value="Sore throat">
+                  <label id="label_input_19_9" for="input_19_9"> Sore throat </label>
+                </span>
+                <span class="form-checkbox-item formCheckboxOther">
+                  <input type="checkbox" class="form-checkbox-other form-checkbox" name="q19_pleaseCheck[other]" id="other_19" value="other" tabindex="0" aria-label="Other">
+                  <label id="label_other_19" style="text-indent:0" for="other_19"> Other </label>
+                  <span id="other_19_input" class="other-input-container is-none" style="clear: left">
+                    <input type="text" class="form-checkbox-other-input form-textbox" name="q19_pleaseCheck[other]" data-otherhint="Other" size="15" id="input_19" data-placeholder="Please type another option here" placeholder="Please type another option here">
+                  </span>
+                </span>
+            </div> -->
+            <div class="form-group container">
+
+                <div class="form-row">
+
+                    <div class="col-3">
+                    <input type="checkbox" class="form-check-input" id="segunda1">
+                    <label class="form-check-label">Segunda</label>
+                    </div>
+
+                    <div class="col-3">
+                    <input type="checkbox" class="form-check-input" id="segunda2">
+                    <label class="form-check-label">Terça</label>
+                    </div>
+
+                    <div class="col-3">
+                    <input type="checkbox" class="form-check-input" id="segunda3">
+                    <label class="form-check-label">Quarta</label>
+                    </div>
+
+                    <div class="col-3">
+                    <input type="checkbox" class="form-check-input" id="segunda4">
+                    <label class="form-check-label">Quinta</label>
+                    </div>
+
+                    <div class="col-3">
+                    <input type="checkbox" class="form-check-input" id="segunda5">
+                    <label class="form-check-label" style="border:1px">Sexta</label>
+                    </div>
+
+                    <div class="col-3">
+                    <input type="checkbox" class="form-check-input" id="segunda6">
+                    <label class="form-check-label">Sábado</label>
+                    </div>
+
+                    <div class="col-3">
+                    <input type="checkbox" class="form-check-input" id="segunda7">
+                    <label class="form-check-label">Domingo</label>
+                    </div>
+
+                    <span class="form-checkbox-item formCheckboxOther">
+                        <input type="checkbox" class="form-check-input" id="other_19" value="other" tabindex="0" aria-label="Other" onclick="DIVshowhide()">
+                        <label id="label_other_19" for="other_19"> Other </label>
+                        <div id="myDIV">
+                        </div>
+                        <span id="other_19_input" class="other-input-container is-none" style="clear: left">
+                          <input type="text" class="form-checkbox-other-input form-textbox" name="q19_pleaseCheck[other]" data-otherhint="Other" size="30" id="input_19" data-placeholder="Please type another option here" placeholder="Please type another option here">
+                        </span>
+                    </span>
+
+                </div>
+
+                
+            <br></br>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Medical History</label>
+                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Any chronic condition">
+            </div>
+            <p>
+            <form action="/action_page.php">
+                <label for="appointment">Appointment Date:</label>
+                <br></br>
+                <input type="date" id="appointment day" name="appointment day">
+            </form>
+            </p>
+            <br></br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+        <script src="../DIVshowhide.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
