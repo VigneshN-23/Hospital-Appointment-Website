@@ -1,59 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width", initial-scale="1"> 
+    <meta name="viewport" content="width=device-width" , initial-scale="1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="../showhide.css">
 </head>
-<body>  
+
+<body>
     <div class="container">
         <form>
             <br></br>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Full Name</label>
-                <input type="text" class="form-control" aria-describedby="emailHelp"  placeholder="Last Middle First...">
+                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Last Middle First..." style="width: 30%">
             </div>
             <p>
                 <form action="/action_page.php">
                     <label for="birthday">Date Of Birth</label>
                     <br></br>
-                    <input type="date" id="Birthdate" name="Birthdate">
+                    <input type="date" id="Birthdate" name="Birthdate" style="width: 30%">
                 </form>
-                </p>
+            </p>
             <label for="exampleInputEmail1" class="form-label">Gender :</label>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                 <label class="form-check-label" for="flexRadioDefault1">
-                  Male
+                    Male
                 </label>
-              </div>
-              <div class="form-check">
+            </div>
+            <div class="form-check">
                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
                 <label class="form-check-label" for="flexRadioDefault2">
-                  Female
+                    Female
                 </label>
-              </div>
-              <div class="form-check">
+            </div>
+            <div class="form-check">
                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
                 <label class="form-check-label" for="flexRadioDefault3">
-                  Other
+                    Other
                 </label>
-              </div>
-              <p></p>
-            <div class="mb-3">
+            </div>
+            <p></p>
+            <!-- <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Aadhar No.</label>
-                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="XXXX-XXXX-XXXX-XXXX">
+                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="XXXX-XXXX-XXXX-XXXX" style="width: 30%">
+            </div> -->
+            <div>
+                <label for="exampleInputEmail1" class="form-label">Aadhar No.</label>
+                <input type="text" class="form-control" id="tbNum" onkeyup="addHyphen(this)" placeholder="XXXX-XXXX-XXXX-XXXX" style="width: 30%" />
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Full Address</label>
-                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Street Address, Taluka/City, State">
+                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Street Address, Taluka/City, State" style="width: 30%">
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Pin Code</label>
-                <input type="text" class="form-control" aria-describedby="emailHelp" maxlength="7">
+                <input type="text" class="form-control" aria-describedby="emailHelp" maxlength="7" style="width: 30%">
             </div>
             <!-- <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Symptoms</label>
@@ -148,69 +154,86 @@
                 <div class="form-row">
 
                     <div class="col-3">
-                    <input type="checkbox" class="form-check-input" id="segunda1">
-                    <label class="form-check-label">Segunda</label>
+                        <input type="checkbox" class="form-check-input" id="segunda1">
+                        <label class="form-check-label">Body Aches</label>
                     </div>
 
                     <div class="col-3">
-                    <input type="checkbox" class="form-check-input" id="segunda2">
-                    <label class="form-check-label">Terça</label>
+                        <input type="checkbox" class="form-check-input" id="segunda2">
+                        <label class="form-check-label">Nasal congestion</label>
                     </div>
 
                     <div class="col-3">
-                    <input type="checkbox" class="form-check-input" id="segunda3">
-                    <label class="form-check-label">Quarta</label>
+                        <input type="checkbox" class="form-check-input" id="segunda3">
+                        <label class="form-check-label">Persistant pain or pressure on chest</label>
                     </div>
 
                     <div class="col-3">
-                    <input type="checkbox" class="form-check-input" id="segunda4">
-                    <label class="form-check-label">Quinta</label>
+                        <input type="checkbox" class="form-check-input" id="segunda4">
+                        <label class="form-check-label">Cough</label>
                     </div>
 
                     <div class="col-3">
-                    <input type="checkbox" class="form-check-input" id="segunda5">
-                    <label class="form-check-label" style="border:1px">Sexta</label>
+                        <input type="checkbox" class="form-check-input" id="segunda5">
+                        <label class="form-check-label" style="border:1px">High fever</label>
                     </div>
 
                     <div class="col-3">
-                    <input type="checkbox" class="form-check-input" id="segunda6">
-                    <label class="form-check-label">Sábado</label>
+                        <input type="checkbox" class="form-check-input" id="segunda6">
+                        <label class="form-check-label">Loss of taste or smell</label>
                     </div>
 
                     <div class="col-3">
-                    <input type="checkbox" class="form-check-input" id="segunda7">
-                    <label class="form-check-label">Domingo</label>
+                        <input type="checkbox" class="form-check-input" id="segunda7">
+                        <label class="form-check-label">Diarrhea</label>
                     </div>
 
-                    <span class="form-checkbox-item formCheckboxOther">
-                        <input type="checkbox" class="form-check-input" id="other_19" value="other" tabindex="0" aria-label="Other" onclick="DIVshowhide()">
+                    <!-- <span class="form-checkbox-item formCheckboxOther">
+                        <input type="checkbox" class="form-check-input" id="other_19" value="other" tabindex="0" aria-label="Other">
                         <label id="label_other_19" for="other_19"> Other </label>
-                        <div id="myDIV">
-                        </div>
                         <span id="other_19_input" class="other-input-container is-none" style="clear: left">
-                          <input type="text" class="form-checkbox-other-input form-textbox" name="q19_pleaseCheck[other]" data-otherhint="Other" size="30" id="input_19" data-placeholder="Please type another option here" placeholder="Please type another option here">
+                          <input type="text" class="form-checkbox-other-input form-textbox" name="q19_pleaseCheck[other]" data-otherhint="Other" size="15" id="input_19" data-placeholder="Please type another option here" placeholder="Please type another option here">
                         </span>
-                    </span>
+                    </span> -->
+                    <div class="bussines-type">
+                        <input id="bt2" class="form-check-input" type="checkbox" name="type" value="2">
+                        <label for="bt2"> Others</label>
+
+                        <div class="business-fields">
+                            <input type="text" placeholder="  Mention the other symptoms.." name="company-name" style="width: 30%">
+                        </div>
+                    </div>
 
                 </div>
 
-                
-            <br></br>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Medical History</label>
-                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Any chronic condition">
-            </div>
-            <p>
-            <form action="/action_page.php">
-                <label for="appointment">Appointment Date:</label>
+
                 <br></br>
-                <input type="date" id="appointment day" name="appointment day">
-            </form>
-            </p>
-            <br></br>
-            <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Medical History</label>
+                    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Any chronic condition" style="width: 30%">
+                </div>
+                <p>
+                    <form action="/action_page.php">
+                        <label for="appointment">Appointment Date:</label>
+                        <br></br>
+                        <input type="date" id="appointment day" name="appointment day" style="width: 30%">
+                    </form>
+                </p>
+                <br></br>
+                <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
-        <script src="../DIVshowhide.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <script>                                                
+                                                                                // <!-- TO ADD HYPHEN TO A TEXT -->
+        function addHyphen (element) {
+            let ele = document.getElementById(element.id);
+            ele = ele.value.split('-').join('');                                 // Remove dash (-) if mistakenly entered.
+    
+            let finalVal = ele.match(/.{1,4}/g).join('-');
+            document.getElementById(element.id).value = finalVal;
+        }
+    </script>
 </body>
