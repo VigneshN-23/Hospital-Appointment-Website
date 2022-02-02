@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width" , initial-scale="1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link rel="stylesheet" href="../myapp/style.css">
+  <title>{% block title %} {{ title1 }} {% endblock %}</title>
+</head>
+
+<body style="font-family: 'Montserrat', sans-serif;">
+  <h1 style="margin-left: 40%; margin-top: 2%;">
+    <style>h1{
+            font-size: 50px;
+            font-weight: bold;
+    }
+    </style>
+    THE FORM
+  </h1>
+  <div class="container" style="margin-left: 35%;">
+    <form action="/register" method="POST">
+      <br></br>
+      <div class="mb-3">
+        <!-- {{ error_statement}} -->
+        <!-- {% block content %} {{MANGO}} {% endblock %} -->
+        <label for="exampleInputEmail1" class="form-label">Full Name</label>
+        <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Last Middle First..." name='full_name' style="width:30%">
+      </div>
+      <p>
+             Gender:
+      </p>
+      <div class="form-check">
+        <input type="radio" name="radio" id="radio1" value="Male" >
+        <label class="form-check-label" for="radio1">
+          Male
+        </label>
+      </div>
+      <div class="form-check">
+        <input type="radio" name="radio" id="radio2" value="Female" >
+        <label class="form-check-label" for="radio2">
+          Female
+        </label>
+      </div>
+      <div class="form-check">
+        <input type="radio" name="radio" id="radio3" value="Other" >
+        <label class="form-check-label" for="radio3">
+          Other
+        </label>
+      </div>
+      <!-- <p>
+        <form action="/action_page.php" method="POST">
+          <label for="birthday">Date Of Birth</label>
+          <br></br>
+          <input type="date" id="Birthdate" name="Birthdate">
+        </form>
+      </p> -->
+      <p></p>
+
+      <div>
+        <label for="exampleInputEmail1" class="form-label">Aadhar No.</label>
+        <input type="text" class="form-control" id="tbNum" onkeyup="addHyphen(this)" placeholder="XXXX-XXXX-XXXX-XXXX"
+          style="width: 30%" name = "aadhar"/>
+      </div>
+
+      <p>
+        &nbsp
+      </p>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Full Address</label>
+        <input type="text" class="form-control" aria-describedby="emailHelp"
+          placeholder="Street Address, Taluka/City, State" style="width: 30%" name = "address">
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Phone Number(+91)</label>
+        <input type="text" class="form-control" aria-describedby="emailHelp" maxlength="10" style="width: 30%" name = "phone">
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Pin Code</label>
+        <input type="text" class="form-control" aria-describedby="emailHelp" maxlength="7" style="width: 30%" name = "pincode">
+      </div>
+
+      <p>
+             Symptoms:
+      </p>
+
+      <div class="form-check">
+        <input type="checkbox" name="fever" id="fever" value="Yes" >
+        <label class="form-check-label" for="fever">
+          Fever
+        </label>
+      </div>
+
+      <div class="form-check">
+        <input type="checkbox" name="lossofsmelltaste" id="lossofsmelltaste" value="Yes" >
+        <label class="form-check-label" for="lossofsmelltaste">
+          Loss Of Taste And Smell
+        </label>
+      </div>
+      <!-- <div class="form-check">
+        <input type="checkbox" name="others" id="others" >
+        <label class="form-check-label" for="others">
+          Others
+        </label>
+      </div> -->
+      <p>
+
+      </p>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Other:</label>
+        <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Mention the other symptoms..." name="other" style="width: 30%">
+      </div>
+
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Medical History:</label>
+          <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Any chronic condition" name = "medical"  style="width:30%">
+        </div>
+        <!-- <p>
+          <form action="/action_page.php">
+            <label for="appointment">Appointment Date:</label>
+            <br></br>
+            <input type="date" id="appointment day" name="appointment day">
+          </form>
+        </p> -->
+        <p>
+          &nbsp
+        </p>
+        <div>
+        <label for="start">Appointment date:  </label>
+
+        <input type="date" id="date" name="appointmentdate"
+               value="2022-02-02"
+               min="2022-02-01" max="2023-1-31">
+        </div>
+        <br></br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
+
+  <script>
+    function addHyphen(element) {
+      let ele = document.getElementById(element.id);
+      ele = ele.value.split('-').join(''); // Remove dash (-) if mistakenly entered.
+
+      let finalVal = ele.match(/.{1,4}/g).join('-');
+      document.getElementById(element.id).value = finalVal;
+    }
+
+  </script>
+</body>
