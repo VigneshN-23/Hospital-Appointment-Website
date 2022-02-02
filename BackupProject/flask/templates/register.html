@@ -9,10 +9,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-  <link rel="stylesheet" href="../myapp/style.css">
   <title>{% block title %} {{ title1 }} {% endblock %}</title>
 </head>
-
 <body style="font-family: 'Montserrat', sans-serif;">
   <h1 style="margin-left: 40%; margin-top: 2%;">
     <style>h1{
@@ -22,35 +20,33 @@
     </style>
     THE FORM
   </h1>
-  <div class="container" style="margin-left: 35%;">
-    <form action="/register" method="POST">
+  <div class="container">
+    <form action="/register" method="POST" style="border: 2px solid black">
       <br></br>
-      <div class="mb-3">
+      <div class="mb-3" style="margin-left: 20%; font-weight: bold">
         <!-- {{ error_statement}} -->
         <!-- {% block content %} {{MANGO}} {% endblock %} -->
         <label for="exampleInputEmail1" class="form-label">Full Name</label>
-        <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Last Middle First..." name='full_name' style="width:30%">
+        <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Last Middle First..." name='full_name' style="width:80%">
       </div>
-      <p>
+      <p style="margin-left: 20%; font-weight: bold">
              Gender:
       </p>
-      <div class="form-check">
+      <div style="margin-left: 20%;">
         <input type="radio" name="radio" id="radio1" value="Male" >
         <label class="form-check-label" for="radio1">
           Male
         </label>
       </div>
-      <div class="form-check">
+      <div style="margin-left: 20%;">
         <input type="radio" name="radio" id="radio2" value="Female" >
         <label class="form-check-label" for="radio2">
           Female
         </label>
       </div>
-      <div class="form-check">
+      <div style="margin-left: 20%;">
         <input type="radio" name="radio" id="radio3" value="Other" >
-        <label class="form-check-label" for="radio3">
-          Other
-        </label>
+        <label class="form-check-label" for="radio3">        </label>
       </div>
       <!-- <p>
         <form action="/action_page.php" method="POST">
@@ -61,44 +57,44 @@
       </p> -->
       <p></p>
 
-      <div>
+      <div style="margin-left: 20%; font-weight: bold">
         <label for="exampleInputEmail1" class="form-label">Aadhar No.</label>
         <input type="text" class="form-control" id="tbNum" onkeyup="addHyphen(this)" placeholder="XXXX-XXXX-XXXX-XXXX"
-          style="width: 30%" name = "aadhar"/>
+          style="width: 80%" name = "aadhar"/>
       </div>
 
       <p>
         &nbsp
       </p>
 
-      <div class="mb-3">
+      <div class="mb-3" style="margin-left: 20%; font-weight: bold" >
         <label for="exampleInputEmail1" class="form-label">Full Address</label>
         <input type="text" class="form-control" aria-describedby="emailHelp"
-          placeholder="Street Address, Taluka/City, State" style="width: 30%" name = "address">
+          placeholder="Street Address, Taluka/City, State" style="width: 80%" name = "address">
       </div>
 
-      <div class="mb-3">
+      <div class="mb-3" style="margin-left: 20%; font-weight: bold">
         <label for="exampleInputEmail1" class="form-label">Phone Number(+91)</label>
-        <input type="text" class="form-control" aria-describedby="emailHelp" maxlength="10" style="width: 30%" name = "phone">
+        <input type="text" class="form-control" aria-describedby="emailHelp" maxlength="10" style="width: 80%" name = "phone">
       </div>
 
-      <div class="mb-3">
+      <div class="mb-3" style="margin-left: 20%; font-weight: bold">
         <label for="exampleInputEmail1" class="form-label">Pin Code</label>
-        <input type="text" class="form-control" aria-describedby="emailHelp" maxlength="7" style="width: 30%" name = "pincode">
+        <input type="text" class="form-control" aria-describedby="emailHelp" maxlength="7" style="width: 80%" name = "pincode">
       </div>
 
-      <p>
+      <p style="margin-left: 20%; font-weight: bold" >
              Symptoms:
       </p>
 
-      <div class="form-check">
+      <div style="margin-left: 20%;">
         <input type="checkbox" name="fever" id="fever" value="Yes" >
         <label class="form-check-label" for="fever">
           Fever
         </label>
       </div>
 
-      <div class="form-check">
+      <div style="margin-left: 20%;">
         <input type="checkbox" name="lossofsmelltaste" id="lossofsmelltaste" value="Yes" >
         <label class="form-check-label" for="lossofsmelltaste">
           Loss Of Taste And Smell
@@ -113,15 +109,15 @@
       <p>
 
       </p>
-      <div class="mb-3">
+      <div class="mb-3" style="margin-left: 20%;">
         <label for="exampleInputEmail1" class="form-label">Other:</label>
-        <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Mention the other symptoms..." name="other" style="width: 30%">
+        <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Mention the other symptoms..." name="other" style="width: 80%">
       </div>
 
 
-        <div class="mb-3">
+        <div class="mb-3" style="margin-left: 20%; font-weight: bold">
           <label for="exampleInputEmail1" class="form-label">Medical History:</label>
-          <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Any chronic condition" name = "medical"  style="width:30%">
+          <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Any chronic condition" name = "medical"  style="width:80%">
         </div>
         <!-- <p>
           <form action="/action_page.php">
@@ -133,15 +129,19 @@
         <p>
           &nbsp
         </p>
-        <div>
+        <div style="margin-left: 20%; font-weight: bold">
         <label for="start">Appointment date:  </label>
+        <p>
+
+        </p>
 
         <input type="date" id="date" name="appointmentdate"
                value="2022-02-02"
-               min="2022-02-01" max="2023-1-31">
+               min="2022-02-01" max="2023-1-31" >
         </div>
         <br></br>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        
+        <button type="submit" class="btn btn-danger" style="margin-bottom: 100px;margin-left: 20%;">Submit</button>
     </form>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
